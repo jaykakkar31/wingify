@@ -3,9 +3,11 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from langchain_community.llms import Ollama
 from sendEmail import send_email
+
 ollama_mixtral = Ollama(model="mixtral", base_url="https://11434-01hzv9cbn7e9dg1k6ggzbqjkgt.cloudspaces.litng.ai")
 email = 'testingcrewai@gmail.com'
 message = 'testjkgvrjhfdbingjkbkjvfk m,d'
+
 @CrewBase
 class FinancialAnalystCrew:
     """FinancialAnalystCrew crew"""
@@ -53,13 +55,15 @@ class FinancialAnalystCrew:
             verbose=2
         )
 
-def main(report_parsed,receiver_email):
+def crew_main(report_parsed, receiver_email):
     crew = FinancialAnalystCrew()
     inputs = {"data": report_parsed}
-    result=crew.crew().kickoff(inputs=inputs)
+    result = crew.crew().kickoff(inputs=inputs)
     send_email(email, receiver_email, result)
     try:
         shutil.rmtree('uploads')
         print('Folder and its content removed')
-    except:
-        print('Folder not deleted')
+    except FileNotFoundError:
+        print('Folder not found')
+    except Exception as e:
+        print(f'Error deleting folder: {e}')

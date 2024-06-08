@@ -3,7 +3,7 @@ import os
 from werkzeug.utils import secure_filename
 from sendEmail import send_email
 from pdf import file_reader
-from crew import main
+from crew import crew_main
 app = Flask(__name__)
 import re
 @app.route('/upload', methods=['POST'])
@@ -33,7 +33,7 @@ def upload_file():
             print(e)
         file_data = file_reader('./uploads/'+filename)
         try:
-            main(file_data,receiver_email)
+            crew_main(file_data,receiver_email)
             return jsonify({'message': 'File uploaded successfully'}), 200
         except Exception as e:
             print(e)
