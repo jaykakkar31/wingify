@@ -1,5 +1,0 @@
-pip==24
-Flask==3.0.3
-python3==3.12.3
-PyPDF2==3.0.1
-crewai==0.30.11
