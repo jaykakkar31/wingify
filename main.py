@@ -34,7 +34,7 @@ def upload_file():
         file_data = file_reader('./uploads/'+filename)
         try:
             crew_main(file_data,receiver_email)
-            return jsonify({'message': 'File uploaded successfully'}), 200
+            return jsonify({'message': 'Report processed and email sent successfully'}), 200
         except Exception as e:
             print(e)
             return jsonify({'error': 'Error processing file'}), 500
