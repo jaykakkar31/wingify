@@ -41,7 +41,13 @@ Before you begin, ensure you have the following installed:
 1. **Create a `.env` file in the root directory of the project:**
     ```plaintext
     PASSWORD=xuqs danz clla yfup
-    MODEL_URL= (generate url from lightning ai of Mistrial model)
+    MODEL_URL=
+    # generate url from lightning ai of Mistral model
+    # In lighting ai select studio templates search `run mistral moe`
+    # Now after running the studio click on plus button and select serving and click on API builder
+    # Click API builder from right panel. In api builder click new api and add api name and enable api.
+    # Click api and copy the url and paste it in env.
+    
     ```
 
 2. **Set up email settings in the `.env` file with your email credentials for sending emails.**
