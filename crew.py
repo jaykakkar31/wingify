@@ -3,8 +3,10 @@ from crewai import Agent, Crew, Process, Task
 from crewai.project import CrewBase, agent, crew, task
 from langchain_community.llms import Ollama
 from sendEmail import send_email
-
-ollama_mixtral = Ollama(model="mixtral", base_url="https://11434-01hzv9cbn7e9dg1k6ggzbqjkgt.cloudspaces.litng.ai")
+from dotenv import load_dotenv
+import os
+load_dotenv()
+ollama_mixtral = Ollama(model="mixtral", base_url=os.getenv('MODEL_URL'))
 email = 'testingcrewai@gmail.com'
 message = 'testjkgvrjhfdbingjkbkjvfk m,d'
 
