@@ -1,0 +1,18 @@
+research_company_task:
+# analyse_report:
+  description: >
+    Analyse the patients blood report {data}.
+    The goal is to find all the risk factors or abnormalities in the report .
+  expected_output: >
+    All of the relevant risk factors and abnormalities in blood report and patients name.
+
+analyze_company_task:
+# suggestions:
+  description: >
+    Take all the risk factors and abnormalities in consideration and find health-related articles based on the report's analysis.
+  expected_output: >
+    Needed article links including all of the recommendations necessary for patient.Provide output is formal format to be sent on email.Do not add subject.Generate only content for mail body.
+    Consider your name as 'Blood Expert' and use patient name from report and if no name present consider it "Patient".
+
+
+    # A nicely formatted articles including all of the recommendations necessary for patient.
