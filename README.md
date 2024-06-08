@@ -50,7 +50,7 @@ Before you begin, ensure you have the following installed:
 
 1. **Start the Flask development server:**
     ```bash
-    flask run
+    python main.py
     ```
 
 2. **Access the application in your web browser:**
