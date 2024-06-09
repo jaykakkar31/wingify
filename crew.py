@@ -7,8 +7,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 ollama_mixtral = Ollama(model="mixtral", base_url=os.getenv('MODEL_URL'))
-email = 'testingcrewai@gmail.com'
-message = 'testjkgvrjhfdbingjkbkjvfk m,d'
+
 
 @CrewBase
 class FinancialAnalystCrew:
@@ -61,7 +60,7 @@ def crew_main(report_parsed, receiver_email):
     crew = FinancialAnalystCrew()
     inputs = {"data": report_parsed}
     result = crew.crew().kickoff(inputs=inputs)
-    send_email(email, receiver_email, result)
+    send_email( receiver_email, result)
     try:
         shutil.rmtree('uploads')
         print('Folder and its content removed')
