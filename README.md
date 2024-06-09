@@ -8,7 +8,8 @@ This project is a Flask web application that processes blood test reports using 
 - [Configuration](#configuration)
 - [Running the App](#running-the-app)
 - [API Endpoints](#api-endpoints)
-
+- [Demo](#running-the-app)
+  
 ## Prerequisites
 
 Before you begin, ensure you have the following installed:
@@ -39,15 +40,17 @@ Before you begin, ensure you have the following installed:
 ## Configuration
 
 1. **Create a `.env` file in the root directory of the project:**
-    ```plaintext
-    PASSWORD=xuqs danz clla yfup
+    ```bash
+    PASSWORD='tngu gnrx fsxk casx'  # If this password donot work create google app password    `https://myaccount.google.com/apppasswords`
+    
     MODEL_URL=
-    # generate url from lightning ai of Mistral model
+    # Generate url from lightning ai of Mistral model
     # In lighting ai select studio templates search `run mistral moe`
-    # Now after running the studio click on plus button and select serving and click on API builder
+    # Now after running the studio click on plus button on right side panel and after click select `serving` and `click on API builder` and generate api with port 11434
     # Click API builder from right panel. In api builder click new api and add api name and enable api.
     # Click api and copy the url and paste it in env.
-    
+
+    EMAIL='testingcrewai78@gmail.com'
     ```
 
 2. **Set up email settings in the `.env` file with your email credentials for sending emails.**
@@ -81,4 +84,8 @@ Before you begin, ensure you have the following installed:
             "message": "Report processed and email sent successfully."
         }
         ```
+
+## Demo
+
+- https://youtu.be/4Rs7jwPEFZI
 
